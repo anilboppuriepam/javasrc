@@ -7,14 +7,14 @@ public Paper(){
 	
 }
 	public Paper(double price) {
-		// TODO Auto-generated constructor stub
+		
 		super( price);
 	}
 
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "Paper:" + this.getPrice();
 	}
 

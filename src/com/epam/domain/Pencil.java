@@ -7,7 +7,7 @@ public class Pencil extends Stationery implements IWritable, Comparable {
 	private String color = "black";
 
 	public Pencil() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Pencil(double price, String color) {
@@ -31,7 +31,7 @@ public class Pencil extends Stationery implements IWritable, Comparable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "Pencil:" + this.getPrice();
 	}
 

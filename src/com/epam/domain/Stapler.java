@@ -6,7 +6,7 @@ public class Stapler extends Stationery implements Comparable {
 	private boolean hasPins;
 
 	public Stapler() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Stapler(double price, boolean hasPins) {
@@ -22,7 +22,7 @@ public class Stapler extends Stationery implements Comparable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "Stapler:" + this.getPrice();
 	}
 

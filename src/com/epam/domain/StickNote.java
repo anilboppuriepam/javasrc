@@ -9,7 +9,7 @@ public class StickNote extends Stationery implements IEditable, Comparable {
 	private static int NOTE_CAPACITY = 100;
 
 	public StickNote() {
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public StickNote(double price) {
@@ -31,13 +31,13 @@ public class StickNote extends Stationery implements IEditable, Comparable {
 
 	@Override
 	public StringBuilder getText() {
-		// TODO Auto-generated method stub
+		
 		return content;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+	
 		return "StickNote:" + this.getPrice();
 	}
 

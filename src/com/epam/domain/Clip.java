@@ -38,7 +38,7 @@ public class Clip extends Stationery implements IHoldable, Comparable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+	
 		return "Clip:" + price;
 	}
 

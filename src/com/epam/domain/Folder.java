@@ -42,13 +42,13 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+	
 		return "Folder:" + this.getPrice();
 	}
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
+		
 		Folder ref = (Folder) o;
 		if (this.getPrice() > ref.getPrice())
 			return 1;

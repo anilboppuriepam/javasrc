@@ -5,7 +5,7 @@ public class Pen extends Stationery implements Comparable {
 	private String color = "blue";
 
 	public Pen() {
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public Pen(double price, String color) {
@@ -24,7 +24,7 @@ public class Pen extends Stationery implements Comparable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "Pen:" + this.getPrice();
 		
 	}

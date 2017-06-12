@@ -9,7 +9,7 @@ public class Pin extends Stationery implements Comparable {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "Pin:" + this.getPrice();
 	}
 

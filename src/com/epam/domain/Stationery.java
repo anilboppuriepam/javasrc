@@ -6,7 +6,7 @@ public abstract class Stationery {
 	private double price;
 	
 	public Stationery() {
-		// TODO Auto-generated constructor stub
+	
 	}
 	public Stationery( double price) {
 		
