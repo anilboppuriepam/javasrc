@@ -7,7 +7,7 @@ import com.epam.interfaces.IHoldable;
 
 public class Clip extends Stationery implements IHoldable, Comparable {
 
-	private double price;
+
 
 	public Clip(double price) {
 		super(price);
@@ -21,14 +21,6 @@ public class Clip extends Stationery implements IHoldable, Comparable {
 		if (stationery instanceof Paper)
 			papersSet.add(stationery);
 
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
 	}
 
 	public Set getPapersSet() {

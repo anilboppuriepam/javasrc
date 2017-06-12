@@ -2,8 +2,7 @@ package com.epam.domain;
 
 public class Pen extends Stationery implements Comparable {
 
-	private String color = "blue";
-
+	
 	public Pen() {
 
 	}

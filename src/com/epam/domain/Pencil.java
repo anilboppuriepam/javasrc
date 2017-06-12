@@ -4,7 +4,6 @@ import com.epam.interfaces.IWritable;
 
 public class Pencil extends Stationery implements IWritable, Comparable {
 
-	private String color = "black";
 
 	public Pencil() {
 		
