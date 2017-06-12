@@ -100,7 +100,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		kit.displayItems2();
+		kit.displayItems();
 
 	}
 
