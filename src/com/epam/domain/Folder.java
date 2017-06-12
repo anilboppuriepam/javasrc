@@ -9,7 +9,7 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 	private Stack<Stationery> file = new Stack<>();
 
 	public Folder() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Folder(double price) {

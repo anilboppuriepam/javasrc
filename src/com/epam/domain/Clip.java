@@ -44,7 +44,7 @@ public class Clip extends Stationery implements IHoldable, Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
+		
 		Clip ref = (Clip) o;
 		if (this.price > ref.getPrice())
 			return 1;

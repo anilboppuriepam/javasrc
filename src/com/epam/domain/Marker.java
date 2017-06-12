@@ -8,7 +8,7 @@ public class Marker extends Stationery implements IHiglighter, Comparable {
 	
 
 	public Marker() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Marker(String color, double price) {
