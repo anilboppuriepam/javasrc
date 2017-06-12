@@ -34,9 +34,10 @@ public class StationeryKit {
 
 	}
 
-	public void displayItems() {
-
-		// System.out.println(itemMap);
+	/*
+	 *  This method has lot of code smell hence alternative implementation
+	 *  has been developed with name diplayItems2()
+	 * public void displayItems() {
 
 		System.out.printf("\t%20s%20s%20s \n", " ProductID", "Description",
 				"Price");
@@ -99,6 +100,25 @@ public class StationeryKit {
 			System.out.println();
 
 		}
+	}
+*/
+	public void displayItems2() {
+
+		System.out.printf("\t%20s%20s%20s \n", " ProductID", "Description",
+				"Price");
+		for (Map.Entry<Integer, Set<Stationery>> entry : itemMap.entrySet()) {
+
+			Integer key = entry.getKey();
+			Set<Stationery> stationery = itemMap.get(key);
+
+			for (Stationery st : stationery) {
+
+				System.out.printf("\t%20s%20s%20.2f\n ", key, st.getClass()
+						.getSimpleName(), st.getPrice());
+			}
+			System.out.println();
+		}
+
 	}
 
 	public void add(Integer categoryId, Set stationery) {

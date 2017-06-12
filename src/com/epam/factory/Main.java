@@ -10,6 +10,7 @@ import com.epam.domain.Paper;
 import com.epam.domain.Pen;
 import com.epam.domain.Pencil;
 import com.epam.domain.Stapler;
+import com.epam.domain.Stationery;
 import com.epam.domain.StickNote;
 import com.epam.interfaces.StationeryIdentifiers;
 import com.epam.stationery.store.StationeryKit;
@@ -99,8 +100,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		kit.display(5);
-		kit.displayItems();
+		kit.displayItems2();
 
 	}
 
