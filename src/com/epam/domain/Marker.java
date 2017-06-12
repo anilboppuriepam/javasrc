@@ -5,16 +5,16 @@ import com.epam.interfaces.IHiglighter;
 public class Marker extends Stationery implements IHiglighter, Comparable {
 
 	private String color;
-	private double price;
+	
 
 	public Marker() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Marker(String color, double price) {
-		super();
+		super(price);
 		this.color = color;
-		this.price = price;
+	
 	}
 
 	public String getColor() {
@@ -25,18 +25,12 @@ public class Marker extends Stationery implements IHiglighter, Comparable {
 		this.color = color;
 	}
 
-	public double getPrice() {
-		return price;
-	}
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Marker:" + price;
+		return "Marker:" + this.getPrice();
 	}
 
 	@Override
@@ -55,9 +49,9 @@ public class Marker extends Stationery implements IHiglighter, Comparable {
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		Marker ref = (Marker) o;
-		if (this.price > ref.getPrice())
+		if (this.getPrice() > ref.getPrice())
 			return 1;
-		else if (this.price < ref.getPrice())
+		else if (this.getPrice() < ref.getPrice())
 			return -1;
 		else
 			return 0;

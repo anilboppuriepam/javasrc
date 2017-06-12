@@ -10,8 +10,7 @@ public class Clip extends Stationery implements IHoldable, Comparable {
 	private double price;
 
 	public Clip(double price) {
-		super();
-		this.price = price;
+		super(price);
 	}
 
 	Set<Stationery> papersSet = new HashSet<>();

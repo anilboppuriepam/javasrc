@@ -4,7 +4,6 @@ import com.epam.interfaces.IWritable;
 
 public class Pencil extends Stationery implements IWritable, Comparable {
 
-	private double price;
 	private String color = "black";
 
 	public Pencil() {
@@ -12,21 +11,7 @@ public class Pencil extends Stationery implements IWritable, Comparable {
 	}
 
 	public Pencil(double price, String color) {
-		super();
-		this.price = price;
-		this.color = color;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public Pencil(String color) {
-		super();
+		super(price);
 		this.color = color;
 	}
 
@@ -47,15 +32,15 @@ public class Pencil extends Stationery implements IWritable, Comparable {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Pencil:" + price;
+		return "Pencil:" + this.getPrice();
 	}
 
 	@Override
 	public int compareTo(Object o) {
 		Pencil ref = (Pencil) o;
-		if (this.price > ref.getPrice())
+		if (this.getPrice() > ref.getPrice())
 			return 1;
-		else if (this.price < ref.getPrice())
+		else if (this.getPrice() < ref.getPrice())
 			return -1;
 		else
 			return 0;
