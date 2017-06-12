@@ -1,32 +1,22 @@
 package com.epam.domain;
 
 public class Pen extends Stationery implements Comparable {
-	
+
 	private String color = "blue";
 
 	public Pen() {
-	
+
 	}
 
 	public Pen(double price, String color) {
-		super(price);
-		this.color = color;		
-	}
-
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
+		super(color, price);
 	}
 
 	@Override
 	public String toString() {
-		
-		return "Pen:" + this.getPrice();
-		
+
+		return "Pen:" + this.getColor()+this.getPrice();
+
 	}
 
 	@Override

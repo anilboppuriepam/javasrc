@@ -4,33 +4,18 @@ import com.epam.interfaces.IHiglighter;
 
 public class Marker extends Stationery implements IHiglighter, Comparable {
 
-	private String color;
-	
-
 	public Marker() {
 		
 	}
 
 	public Marker(String color, double price) {
-		super(price);
-		this.color = color;
-	
+		super(color,price);
 	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
-
 
 	@Override
 	public String toString() {
 	
-		return "Marker:" + this.getPrice();
+		return "Marker:" + this.getColor() + this.getPrice();
 	}
 
 	@Override

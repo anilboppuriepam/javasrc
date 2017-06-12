@@ -11,28 +11,19 @@ public class Pencil extends Stationery implements IWritable, Comparable {
 	}
 
 	public Pencil(double price, String color) {
-		super(price);
-		this.color = color;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
+		super(color,price);
 	}
 
 	@Override
 	public void write() {
 
-		System.out.println("writing in " + color);
+		System.out.println("writing in " + this.getColor());
 	}
 
 	@Override
 	public String toString() {
 		
-		return "Pencil:" + this.getPrice();
+		return "Pencil:" + this.getColor()+ this.getPrice();
 	}
 
 	@Override

@@ -45,7 +45,7 @@ public class StationeryKit {
 
 			for (Stationery st : stationery) {
 
-				System.out.printf("\t%20s%20s%20.2f\n ", key, st.getClass()
+				System.out.printf("\t%20s%20s%20.2f\n ", key, st.getColor()+st.getClass()
 						.getSimpleName(), st.getPrice());
 			}
 			System.out.println();
