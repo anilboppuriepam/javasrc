@@ -3,7 +3,7 @@ package com.epam.domain;
 import com.epam.domain.Clip;
 
 @SuppressWarnings("rawtypes")
-public abstract class Stationery implements Comparable {
+public abstract class Stationery {
 
 	private static int itemID;
 	private double price;
@@ -49,75 +49,5 @@ public abstract class Stationery implements Comparable {
 		Stationery.itemID = itemID;
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		int result = 0;
-		Stationery ref = null;
-		if (o != null && o instanceof Clip) {
-			ref = (Clip) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Folder) {
-			ref = (Folder) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Marker) {
-			ref = (Marker) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Paper) {
-			ref = (Paper) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Pen) {
-			ref = (Pen) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Pencil) {
-			ref = (Pencil) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof Pin) {
-			ref = (Pin) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		} else if (o != null && o instanceof StickNote) {
-			ref = (StickNote) o;
-			if (this.getPrice() > ref.getPrice())
-				result = 1;
-			else if (this.getPrice() < ref.getPrice())
-				result = -1;
-			else
-				result = 0;
-		}
-		return result;
-	}
+	
 }

@@ -2,8 +2,8 @@ package com.epam.domain;
 
 import com.epam.interfaces.IWritable;
 
-//public class Pencil extends Stationery implements IWritable, Comparable {
-	public class Pencil extends Stationery implements IWritable {
+public class Pencil extends Stationery implements IWritable, Comparable {
+	
 
 
 	public Pencil() {
@@ -26,7 +26,7 @@ import com.epam.interfaces.IWritable;
 		return "Pencil:" + this.getColor()+ this.getPrice();
 	}
 
-/*	@Override
+	@Override
 	public int compareTo(Object o) {
 		Pencil ref = (Pencil) o;
 		if (this.getPrice() > ref.getPrice())
@@ -35,5 +35,5 @@ import com.epam.interfaces.IWritable;
 			return -1;
 		else
 			return 0;
-	}*/
+	}
 }

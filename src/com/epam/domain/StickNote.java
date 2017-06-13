@@ -2,7 +2,7 @@ package com.epam.domain;
 
 import com.epam.interfaces.IEditable;
 
-public class StickNote extends Stationery implements IEditable{//, Comparable {
+public class StickNote extends Stationery implements IEditable, Comparable {
 
 	private StringBuilder content = new StringBuilder();
 	private static int NOTE_CAPACITY = 100;
@@ -40,7 +40,7 @@ public class StickNote extends Stationery implements IEditable{//, Comparable {
 		return "StickNote:" + this.getPrice();
 	}
 
-/*	@Override
+	@Override
 	public int compareTo(Object o) {
 		StickNote ref = (StickNote) o;
 		if (this.getPrice() > ref.getPrice())
@@ -50,5 +50,5 @@ public class StickNote extends Stationery implements IEditable{//, Comparable {
 		else
 			return 0;
 
-	}*/
+	}
 }

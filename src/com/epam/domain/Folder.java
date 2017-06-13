@@ -5,17 +5,18 @@ import java.util.Stack;
 import com.epam.interfaces.IHoldable;
 
 public class Folder extends Stationery implements IHoldable, Comparable {
-	
+
 	private Stack<Stationery> file = new Stack<>();
 
 	public Folder() {
-		
+
 	}
 
 	public Folder(double price) {
 		super(price);
 
 	}
+
 	@Override
 	public void hold(Stationery stationery) {
 		file.push(stationery);
@@ -37,16 +38,21 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 
 	@Override
 	public String toString() {
-	
+
 		return "Folder:" + this.getPrice();
 	}
 
-	/*
-	 * @Override public int compareTo(Object o) {
-	 * 
-	 * Folder ref = (Folder) o; if (this.getPrice() > ref.getPrice()) return 1;
-	 * else if (this.getPrice() < ref.getPrice()) return -1; else return 0;
-	 * 
-	 * }
-	 */
+	@Override
+	public int compareTo(Object o) {
+
+		Folder ref = (Folder) o;
+		if (this.getPrice() > ref.getPrice())
+			return 1;
+		else if (this.getPrice() < ref.getPrice())
+			return -1;
+		else
+			return 0;
+
+	}
+
 }

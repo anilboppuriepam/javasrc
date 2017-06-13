@@ -18,7 +18,7 @@ public Paper(){
 		return "Paper:" + this.getPrice();
 	}
 
-	/*@Override
+	@Override
 	public int compareTo(Object o) {
 		Paper ref = (Paper) o;
 		if (this.getPrice() > ref.getPrice())
@@ -27,5 +27,5 @@ public Paper(){
 			return -1;
 		else
 			return 0;
-	}*/
+	}
 }

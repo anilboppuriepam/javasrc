@@ -1,7 +1,6 @@
 package com.epam.domain;
 
-//public class Pin extends Stationery implements Comparable {
-	public class Pin extends Stationery {
+public class Pin extends Stationery implements Comparable {
 
 	public Pin(double price) {
 		super(price);
@@ -13,7 +12,7 @@ package com.epam.domain;
 		return "Pin:" + this.getPrice();
 	}
 
-	/*@Override
+	@Override
 	public int compareTo(Object o) {
 		Pin ref = (Pin) o;
 		if (this.getPrice() > ref.getPrice())
@@ -22,6 +21,6 @@ package com.epam.domain;
 			return -1;
 		else
 			return 0;
-	}*/
+	}
 
 }

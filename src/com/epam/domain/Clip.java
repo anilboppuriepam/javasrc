@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.epam.interfaces.IHoldable;
 
-public class Clip extends Stationery implements IHoldable {
+public class Clip extends Stationery implements IHoldable,Comparable {
 
 
 
@@ -34,7 +34,7 @@ public class Clip extends Stationery implements IHoldable {
 		return "Clip:" + this.getPrice();
 	}
 
-	/*@Override
+	@Override
 	public int compareTo(Object o) {
 		
 		Clip ref = (Clip) o;
@@ -45,5 +45,5 @@ public class Clip extends Stationery implements IHoldable {
 		else
 			return 0;
 
-	}*/
+	}
 }

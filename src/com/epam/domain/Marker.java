@@ -30,7 +30,7 @@ public class Marker extends Stationery implements IHiglighter {
 		return null;
 	}
 
-/*	@Override
+	@Override
 	public int compareTo(Object o) {
 	
 		Marker ref = (Marker) o;
@@ -40,5 +40,5 @@ public class Marker extends Stationery implements IHiglighter {
 			return -1;
 		else
 			return 0;
-	}*/
+	}
 }
