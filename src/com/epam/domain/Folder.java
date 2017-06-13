@@ -16,14 +16,9 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 		super(price);
 
 	}
-
-
-
 	@Override
 	public void hold(Stationery stationery) {
-
 		file.push(stationery);
-
 	}
 
 	public File getFile() {
@@ -46,16 +41,12 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 		return "Folder:" + this.getPrice();
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		
-		Folder ref = (Folder) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
-
-	}
+	/*
+	 * @Override public int compareTo(Object o) {
+	 * 
+	 * Folder ref = (Folder) o; if (this.getPrice() > ref.getPrice()) return 1;
+	 * else if (this.getPrice() < ref.getPrice()) return -1; else return 0;
+	 * 
+	 * }
+	 */
 }
