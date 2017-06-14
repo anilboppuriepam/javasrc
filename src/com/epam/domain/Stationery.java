@@ -5,7 +5,7 @@ import com.epam.domain.Clip;
 @SuppressWarnings("rawtypes")
 public abstract class Stationery implements Comparable<Stationery> {
 
-	private static int itemID;
+	private int itemID;
 	private double price;
 	private String color = "";
 
@@ -16,6 +16,7 @@ public abstract class Stationery implements Comparable<Stationery> {
 	public Stationery(double price) {
 
 		this.price = price;
+		++this.itemID;
 	}
 
 	public Stationery(String color, double price) {
@@ -41,22 +42,8 @@ public abstract class Stationery implements Comparable<Stationery> {
 		this.price = price;
 	}
 
-	public static int getItemID() {
+	public int getItemID() {
 		return itemID;
-	}
-
-	public static void setItemID(int itemID) {
-		Stationery.itemID = itemID;
-	}
-
-	static int compare(double p1, double p2) {
-
-		if (p1 > p2)
-			return 1;
-		else if (p1 < p2)
-			return -1;
-		else
-			return 0;
 	}
 
 	@Override
