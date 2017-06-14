@@ -19,8 +19,7 @@ public class Main {
 
 	static StationeryKit kit = new StationeryKit();
 
-	static {
-
+	private static void initialize() {
 		// 1. first create each stationery item
 		Pencil greenPencil = new Pencil(10, "Green");
 		Pencil bluePencil = new Pencil(10, "Blue");
@@ -37,69 +36,59 @@ public class Main {
 
 		kit.add(StationeryIdentifiers.PENCIL_ID, pencilSet);
 
+	}
+
+	private static void initialize2() {
 		Pen bluePen = new Pen(45, "Black");
 		Pen greenPen = new Pen(54, "Green");
 		Pen redPen = new Pen(40, "Red");
-
 		Set<Pen> penSet = new HashSet<>();
 		penSet.add(bluePen);
 		penSet.add(greenPen);
 		penSet.add(redPen);
-
 		kit.add(StationeryIdentifiers.PEN_ID, penSet);
-
 		Paper paper = new Paper(175);
 		Set<Paper> paperSet = new HashSet<>();
 		paperSet.add(paper);
 		kit.add(StationeryIdentifiers.PAPER_ID, paperSet);
-
 		Clip clip = new Clip(25);
-
 		Set<Clip> clipSet = new HashSet<>();
 		clipSet.add(clip);
-
 		kit.add(StationeryIdentifiers.CLIP_ID, clipSet);
+	}
 
+	private static void initialize3() {
 		Marker markerYellow = new Marker("Yellow", 125);
 		Marker markerGreen = new Marker("Green", 250);
 		Marker markerPink = new Marker("Pink", 175);
-
 		Set<Marker> markerSet = new HashSet<>();
 		markerSet.add(markerYellow);
 		markerSet.add(markerGreen);
 		markerSet.add(markerPink);
-
 		kit.add(StationeryIdentifiers.MARKER_ID, markerSet);
-
 		Stapler stapler = new Stapler(250, false);
 		Stapler staplerBig = new Stapler(435, true);
 		Stapler staplerLarge = new Stapler(1000, false);
-
 		Set<Stapler> staplerSet = new HashSet<>();
-
 		staplerSet.add(stapler);
 		staplerSet.add(staplerBig);
 		staplerSet.add(staplerLarge);
-
 		kit.add(StationeryIdentifiers.STAPLER_ID, staplerSet);
-
 		Folder folder = new Folder(200);
-
 		Set<Folder> folderSet = new HashSet<>();
 		folderSet.add(folder);
 		kit.add(StationeryIdentifiers.FOLDER_ID, folderSet);
-
 		StickNote stickNote = new StickNote(50);
-
 		Set<StickNote> stickNoteSet = new HashSet<>();
 		stickNoteSet.add(stickNote);
-
 		kit.add(StationeryIdentifiers.STICK_NOTE, stickNoteSet);
-
 	}
 
 	public static void main(String[] args) {
 
+		 initialize();
+		 initialize2();
+		 initialize3();
 		kit.displayItems();
 
 	}
