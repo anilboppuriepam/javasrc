@@ -1,5 +1,6 @@
 package com.epam.stationery.store;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -36,22 +37,25 @@ public class StationeryKit {
 
 	public void displayItems() {
 
-		System.out.printf("\t%20s%20s%20s \n", " ProductID", "Description",
-				"Price");
-		for (Map.Entry<Integer, Set<Stationery>> entry : itemMap.entrySet()) {
-
-			Integer key = entry.getKey();
-			Set<Stationery> stationery = itemMap.get(key);
-
-			for (Stationery st : stationery) {
-
-				System.out.printf("\t%20s%20s%20.2f\n ", key, st.getColor()+st.getClass()
-						.getSimpleName(), st.getPrice());
-			}
-			System.out.println();
-		}
-
-	}
+		
+		 Map<Integer, Set<Stationery>> umap = Collections.unmodifiableMap(itemMap);
+		 
+		 Set <Map.Entry<Integer,Set<Stationery>>> entries = umap.entrySet();
+		 
+		 for(Map.Entry<Integer, Set<Stationery>> map: entries){
+			 //System.out.print(map.getKey() +":" + map.getValue());
+			 System.out.print(map.getKey() +":");
+			 System.out.println("");
+			 Set <Stationery> stationery = map.getValue();
+			  for(Stationery st : stationery){
+				  				  System.out.println(st.getClass() + st.getColor() +":"+ st.getPrice());
+			  }
+			 
+			 
+		 }
+		 
+		 
+		 	}
 
 	public void add(Integer categoryId, Set stationery) {
 

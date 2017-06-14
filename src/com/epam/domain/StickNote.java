@@ -43,12 +43,7 @@ public class StickNote extends Stationery implements IEditable, Comparable {
 	@Override
 	public int compareTo(Object o) {
 		StickNote ref = (StickNote) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
+		return compare(this.getPrice(), ref.getPrice());
 
 	}
 }

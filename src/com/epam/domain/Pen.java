@@ -21,11 +21,6 @@ public class Pen extends Stationery implements Comparable {
 	@Override
 	public int compareTo(Object o) {
 		Pen ref = (Pen) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
+		return compare(this.getPrice(), ref.getPrice());
 	}
 }

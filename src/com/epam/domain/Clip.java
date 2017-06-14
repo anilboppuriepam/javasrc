@@ -5,9 +5,7 @@ import java.util.Set;
 
 import com.epam.interfaces.IHoldable;
 
-public class Clip extends Stationery implements IHoldable,Comparable {
-
-
+public class Clip extends Stationery implements IHoldable, Comparable {
 
 	public Clip(double price) {
 		super(price);
@@ -30,20 +28,15 @@ public class Clip extends Stationery implements IHoldable,Comparable {
 
 	@Override
 	public String toString() {
-	
+
 		return "Clip:" + this.getPrice();
 	}
 
 	@Override
 	public int compareTo(Object o) {
-		
+
 		Clip ref = (Clip) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
+		return compare(this.getPrice(), ref.getPrice());
 
 	}
 }

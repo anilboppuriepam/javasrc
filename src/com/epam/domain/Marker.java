@@ -2,7 +2,7 @@ package com.epam.domain;
 
 import com.epam.interfaces.IHiglighter;
 
-public class Marker extends Stationery implements IHiglighter {
+public class Marker extends Stationery implements IHiglighter, Comparable {
 
 	public Marker() {
 		
@@ -34,11 +34,6 @@ public class Marker extends Stationery implements IHiglighter {
 	public int compareTo(Object o) {
 	
 		Marker ref = (Marker) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
+		return compare(this.getPrice(), ref.getPrice());
 	}
 }

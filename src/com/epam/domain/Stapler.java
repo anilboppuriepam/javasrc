@@ -29,11 +29,6 @@ public class Stapler extends Stationery implements Comparable {
 	@Override
 	public int compareTo(Object o) {
 		Stapler ref = (Stapler) o;
-		if (this.getPrice() > ref.getPrice())
-			return 1;
-		else if (this.getPrice() < ref.getPrice())
-			return -1;
-		else
-			return 0;
+		return compare(this.getPrice(), ref.getPrice());
 	}
 }
