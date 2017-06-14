@@ -1,6 +1,6 @@
 package com.epam.domain;
 
-public class Paper extends Stationery implements Comparable{
+public class Paper extends Stationery{
 
 	
 public Paper(){
@@ -18,9 +18,5 @@ public Paper(){
 		return "Paper:" + this.getPrice();
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		Paper ref = (Paper) o;
-		return compare(this.getPrice(), ref.getPrice());
-	}
+
 }

@@ -4,7 +4,7 @@ import java.util.Stack;
 
 import com.epam.interfaces.IHoldable;
 
-public class Folder extends Stationery implements IHoldable, Comparable {
+public class Folder extends Stationery implements IHoldable {
 
 	private Stack<Stationery> file = new Stack<>();
 
@@ -42,11 +42,6 @@ public class Folder extends Stationery implements IHoldable, Comparable {
 		return "Folder:" + this.getPrice();
 	}
 
-	@Override
-	public int compareTo(Object o) {
 
-		Folder ref = (Folder) o;
-		return compare(this.getPrice(), ref.getPrice());
-	}
 
 }

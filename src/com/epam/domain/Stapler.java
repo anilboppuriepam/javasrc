@@ -1,6 +1,6 @@
 package com.epam.domain;
 
-public class Stapler extends Stationery implements Comparable {
+public class Stapler extends Stationery {
 	
 	
 	private boolean hasPins;
@@ -26,9 +26,5 @@ public class Stapler extends Stationery implements Comparable {
 		return "Stapler:" + this.getPrice();
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		Stapler ref = (Stapler) o;
-		return compare(this.getPrice(), ref.getPrice());
-	}
+	
 }

@@ -3,7 +3,7 @@ package com.epam.domain;
 import com.epam.domain.Clip;
 
 @SuppressWarnings("rawtypes")
-public abstract class Stationery {
+public abstract class Stationery implements Comparable<Stationery> {
 
 	private static int itemID;
 	private double price;
@@ -49,13 +49,25 @@ public abstract class Stationery {
 		Stationery.itemID = itemID;
 	}
 
-	static int compare(double p1, double p2){
-		
-		     if(p1 > p2)
-		    	 return 1;
-		     else if(p1<p2)
-		    	 return -1;
-		     else
-		    	 return 0;
+	static int compare(double p1, double p2) {
+
+		if (p1 > p2)
+			return 1;
+		else if (p1 < p2)
+			return -1;
+		else
+			return 0;
 	}
+
+	@Override
+	public int compareTo(Stationery o) {
+
+		if (o != null && (this.price > o.getPrice()))
+			return 1;
+		else if (o != null && (this.price < o.getPrice()))
+			return -1;
+		else
+			return 0;
+	}
+
 }

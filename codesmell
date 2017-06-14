@@ -156,4 +156,59 @@
 			System.out.println();
 		}
 */
+-------------------------------------------------------------------
+@Override
+	public int compareTo(Object o) {
+
+		Clip ref = (Clip) o;
+		return compare(this.getPrice(), ref.getPrice());
+
+	}
+	
+		@Override
+	public int compareTo(Object o) {
+
+		Folder ref = (Folder) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	
+		@Override
+	public int compareTo(Object o) {
+	
+		Marker ref = (Marker) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	
+		@Override
+	public int compareTo(Object o) {
+		Paper ref = (Paper) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		Pen ref = (Pen) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	@Override
+	public int compareTo(Object o) {
+		Pencil ref = (Pencil) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	@Override
+	public int compareTo(Object o) {
+		Pin ref = (Pin) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	@Override
+	public int compareTo(Object o) {
+		Stapler ref = (Stapler) o;
+		return compare(this.getPrice(), ref.getPrice());
+	}
+	@Override
+	public int compareTo(Object o) {
+		StickNote ref = (StickNote) o;
+		return compare(this.getPrice(), ref.getPrice());
+
+	}
 	
