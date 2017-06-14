@@ -37,25 +37,24 @@ public class StationeryKit {
 
 	public void displayItems() {
 
-		
-		 Map<Integer, Set<Stationery>> umap = Collections.unmodifiableMap(itemMap);
-		 
-		 Set <Map.Entry<Integer,Set<Stationery>>> entries = umap.entrySet();
-		 
-		 for(Map.Entry<Integer, Set<Stationery>> map: entries){
-			 //System.out.print(map.getKey() +":" + map.getValue());
-			 System.out.print(map.getKey() +":");
-			 System.out.println("");
-			 Set <Stationery> stationery = map.getValue();
-			  for(Stationery st : stationery){
-				  				  System.out.println(st.getClass() + st.getColor() +":"+ st.getPrice());
-			  }
-			 
-			 
-		 }
-		 
-		 
-		 	}
+		Map<Integer, Set<Stationery>> umap = Collections
+				.unmodifiableMap(itemMap);
+
+		Set<Map.Entry<Integer, Set<Stationery>>> entries = umap.entrySet();
+
+		for (Map.Entry<Integer, Set<Stationery>> map : entries) {
+			// System.out.print(map.getKey() +":" + map.getValue());
+			System.out.print(map.getKey() + ":");
+			System.out.println("");
+			Set<Stationery> stationery = map.getValue();
+			for (Stationery st : stationery) {
+				System.out.println(st.getClass() + st.getColor() + ":"
+						+ st.getPrice());
+			}
+
+		}
+
+	}
 
 	public void add(Integer categoryId, Set stationery) {
 
